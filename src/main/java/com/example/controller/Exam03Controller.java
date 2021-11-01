@@ -19,8 +19,8 @@ public class Exam03Controller {
 		return "exam03";
 	}
 	
-	@RequestMapping("/input")
-	public String input(int num1,int num2,int num3) {
+	@RequestMapping("/calc")
+	public String calc(int num1,int num2,int num3) {
 		
 		int subTotal = num1+num2+num3;
 		int tax = (int)(subTotal*0.1);
