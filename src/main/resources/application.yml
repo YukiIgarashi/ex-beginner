@@ -6,4 +6,4 @@ spring:
     password: higashiga1551
   server:
     servlet:
-      context-path:/exbiginner
+      context-path:/ex-beginner
