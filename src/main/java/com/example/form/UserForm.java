@@ -1,9 +1,14 @@
 package com.example.form;
 
+import javax.validation.constraints.NotBlank;
+
 public class UserForm {
 	
+	@NotBlank(message="入力が必須です")
 	private String name;
+	@NotBlank(message="入力が必須です")
 	private String age;
+	@NotBlank(message="入力が必須です")
 	private String comment;
 	
 	public String getName() {

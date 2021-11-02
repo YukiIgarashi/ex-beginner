@@ -6,10 +6,13 @@
 </head>
 <body>
 	<h1>ユーザー登録</h1>
-	<form th:action="@{exam/input}">
-		名前：<input type="text" name="name"><br>
-		年齢：<input type="text" name="age"><br>
-		コメント：<br><textarea rows="4" cols="30" name="comment"></textarea><br>
+	<form th:action="@{/exam04/input}" th:object="${userForm}" method="post">
+		<div th:errors="*{name}" style="color:red"></div>
+		名前：<input type="text" name="name" th:field="*{name}"><br>
+		<div th:errors="*{age}" style="color:red"></div>
+		年齢：<input type="text" name="age" th:field="*{age}"><br>
+		<div th:errors="*{comment}" style="color:red"></div>
+		コメント：<br><textarea rows="4" cols="30" name="comment" th:field="*{comment}"></textarea><br>
 		<button>登録</button>
 	</form>
 </body>
